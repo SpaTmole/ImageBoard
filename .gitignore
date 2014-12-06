@@ -1,6 +1,9 @@
 lib
+target
 .idea
 .settings
 photoAlbum.mwb
 photoAlbum.mwb.bak
 *\.iml
+node_modules
+bower_components

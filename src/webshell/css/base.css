@@ -1,0 +1,57 @@
+html, body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg.jpg) no-repeat fixed center;
+}
+
+#content-keeper{
+    height: inherit;
+    width: inherit;
+}
+
+#upload-btn{
+    position: absolute;
+    float: right;
+    margin: 10px;
+    top: 0;
+    right: 0;
+}
+
+#main-container{
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    max-width: 1000px;
+    min-width: 500px;
+    height: 80%;
+    background: lightsteelblue;
+    border-radius: 5px;
+    box-shadow: 0 0 10px silver;
+}
+
+img#big-loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.left.carousel-control, .right.carousel-control{
+    cursor: pointer;
+}
+
+.carousel-inner, div.item{
+    height: 100%;
+}
+
+.carousel-img{
+    vertical-align: middle;
+    margin: 20px auto;
+    border-radius: 2px;
+    box-shadow: 0 20px 100px 1px #5a5a5a;
+}
+
+.carousel-caption{
+    bottom: 40px;
+}
