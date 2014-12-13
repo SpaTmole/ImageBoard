@@ -10,25 +10,35 @@ html, body{
     width: inherit;
 }
 
+
+
 #upload-btn{
-    position: absolute;
+    position: fixed;
+    z-index: 10;
     float: right;
     margin: 10px;
     top: 0;
     right: 0;
 }
 
-#main-container{
-    position: relative;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    max-width: 1000px;
-    min-width: 500px;
-    height: 80%;
-    background: lightsteelblue;
-    border-radius: 5px;
-    box-shadow: 0 0 10px silver;
+#refresh-btn{
+    position: fixed;
+    z-index: 10;
+    float: left;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+#main-content{
+    margin: 50px;
+    margin-top: 80px;
 }
 
 img#big-loader{
@@ -45,11 +55,10 @@ img#big-loader{
     height: 100%;
 }
 
-.carousel-img{
-    vertical-align: middle;
-    margin: 20px auto;
-    border-radius: 2px;
-    box-shadow: 0 20px 100px 1px #5a5a5a;
+.thumbnail-img{
+    max-width: 128px;
+    max-height: 128px;
+    box-shadow: 0 5px 20px 1px #5a5a5a;
 }
 
 .carousel-caption{

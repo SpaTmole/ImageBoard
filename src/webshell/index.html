@@ -8,31 +8,75 @@
     <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
+    <script src="plugins/js/jquery.prettyPhoto.js"></script>
+    <link rel="stylesheet" href="plugins/css/mooncake.css" media="all"> 
+    <link rel="stylesheet" href="plugins/css/prettyPhoto.css" media="screen"/>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/base.css"/>
 </head>
 <body>
-    <div id="content-keeper" style="display: none;">
-        <div id="main-container" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-            </ol>
+    <!--<div id="content-keeper" style="display: none;">-->
+        <!--<div id="main-container" class="carousel slide" data-ride="carousel">-->
+            <!--&lt;!&ndash; Indicators &ndash;&gt;-->
+            <!--<ol class="carousel-indicators">-->
+            <!--</ol>-->
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
+            <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+            <!--<div class="carousel-inner" role="listbox">-->
+            <!--</div>-->
+
+            <!--&lt;!&ndash; Controls &ndash;&gt;-->
+            <!--<a class="left carousel-control" role="button" data-slide="prev">-->
+                <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                <!--<span class="sr-only">Previous</span>-->
+            <!--</a>-->
+            <!--<a class="right carousel-control" role="button" data-slide="next">-->
+                <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                <!--<span class="sr-only">Next</span>-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</div>-->
+    <button id="upload-btn" class="btn btn-info" data-toggle="modal" data-target="#uploadModal">
+        Upload your own image <i class="glyphicon glyphicon-picture"></i>
+    </button>
+    <button id="refresh-btn" class="btn btn-warning">
+        <i class="glyphicon glyphicon-refresh"></i>
+    </button>
+    <div class="modal" id="uploadModal" role="dialog" aria-labelledby="uploadModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="uploadModalLabel">New photo:</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" enctype="multipart/form-data" name="form" id="main-form">
+                        <div class="form-group">
+                            <label for="photo" class="col-sm-2 control-label">Photo:</label>
+                            <div class="col-sm-10">
+                                <input name="photo" type="file" class="form-control input-lg" id="photo">
+                                <img id="preview-photo" class="thumbnail-img" style="display: none;"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-sm-2 control-label">Message:</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" name="description" id="description"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="modal-upload-btn">Upload <i class="glyphicon glyphicon-upload"></i></button>
+                </div>
             </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-        <button id="upload-btn" class="btn btn-info"> Upload your own image <i class="glyphicon glyphicon-picture"></i></button>
+    </div>
+    <div id="main-content">
+
+        <div class="gallery">
+        </div>
     </div>
     <img id="big-loader" src="img/7.gif" alt="Loading...">
 </body>
